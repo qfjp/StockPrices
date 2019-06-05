@@ -57,14 +57,12 @@ def bokeh_plot(data, ticker):
 @app.route("/index", methods=["GET", "POST"])
 def index():
     if flask.request.method == "GET":
-        print("what")
         return flask.render_template("index.html")
     else:
         app.vars["features"] = flask.request.form.getlist("features")
 
         app.vars["ticker"] = flask.request.form["ticker"]
         app.vars["data"] = quandl_init(app.vars["ticker"])
-        print(app.vars["features"])
         return flask.redirect("/plot")
 
 
