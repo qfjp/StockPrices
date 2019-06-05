@@ -52,6 +52,7 @@ def bokeh_plot(data, ticker):
     return plot
 
 
+@app.route("/", methods=["GET", "POST"])
 @app.route("/index", methods=["GET", "POST"])
 def index():
     if flask.request.method == "GET":
