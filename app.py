@@ -25,8 +25,9 @@ def quandl_init(ticker):
 
 
 def bokeh_plot(data, ticker):
+    title = "Quandl WIKI Stock Prices - " + ticker
     plot = plt.figure(
-        plot_width=400, plot_height=400, x_axis_type="datetime", title=ticker
+        plot_width=400, plot_height=400, x_axis_type="datetime", title=title
     )
     plot.background_fill_color = "beige"
     plot.background_fill_alpha = 0.5
