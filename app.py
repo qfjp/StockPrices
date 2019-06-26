@@ -12,7 +12,7 @@ color_list = ["blue", "red", "green", "purple"]
 
 
 def quandl_init(ticker):
-    quandl.ApiConfig.api_key = "zzoURudWbRHgR_SEH_gj"
+    quandl.ApiConfig.api_key = quandl_key.api_key
 
     quandl_cols = ["ticker", "date", "open", "close", "adj_open", "adj_close"]
     data = quandl.get_table(
